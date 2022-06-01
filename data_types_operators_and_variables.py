@@ -1,4 +1,7 @@
+from operator import truediv
 from re import X
+
+from scipy.misc import face
 
 
 type(99.9)
@@ -123,7 +126,23 @@ print(price) #print (27)
 # Google and 4 hours for Amazon.
 #6530
 
+google_hourly = 400
+amazon_hourly = 380
+facebook_hourly = 350
 
+#define hourly rates
+
+google_pay = 6 * google_hourly
+amazon_pay = 4 * amazon_hourly
+facebook_pay = 10 * facebook_hourly
+
+#reference rates and input hours
+
+total_pay = google_pay + amazon_pay + facebook_pay
+
+#sum the pays to get total pay, print
+
+print(total_pay)
 
 
 
@@ -141,7 +160,52 @@ can_be_enrolled = class_has_room and Schedule_works
 print(can_be_enrolled)
 
 
+
 # A product offer can be applied only if people buys more than 2 items, 
 # and the offer has not expired. Premium members do not need to buy a 
 # specific amount of products.
 #
+more_than_two = False
+offer_still_good = True
+premium_member = True
+#define arguments which will be used in the logic statement
+
+offer_can_be_applied = offer_still_good and (more_than_two or premium_member)
+offer_can_be_applied
+#True
+#
+#
+#
+username = 'codeup'
+password = 'notastrongpassword'
+
+#create variable that holds the boolean for each of the following
+#at least five characters
+#username must be less than 20 characters
+#password must not be the same as the username
+#bonus neither can start or end with whitespace
+
+#five characters
+at_least_five_characters = len(password)> 5
+at_least_five_characters
+
+#username less than 20
+username_less_than_20 = len(username) < 20
+username_less_than_20
+
+#password different from username
+password_not_the_username = username != password
+
+#remove the whitespaces
+username_no_whitespace=username ==username.strip()
+password_no_whitespace=password ==password.strip()
+
+#put it together
+good_username = username_less_than_20 and username_no_whitespace
+good_password = at_least_five_characters and password_not_the_username and password_no_whitespace
+
+#if these are both true then the combination is good
+
+good_combination = good_username and good_password
+good_combination
+#true
