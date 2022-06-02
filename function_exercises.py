@@ -2,8 +2,6 @@
 # Define a function named is_two. It should accept one input and return 
 # True if the passed input is either the number or the string 2, 
 # False otherwise.
-from re import T
-
 
 def is_two(n):
     n == "two" or n== '2'
@@ -25,39 +23,63 @@ def is_consonant(string):
 # consonant.
 
 def capitalize_starting_consonant(string):
+    if type(string) != str:
+        return False
     first_letter = string[0]
     if is_consonant(first_letter):
         string = string.capitalize()
-        return string
+    return string
 
 
 # Define a function named calculate_tip. It should accept a tip percentage 
 # (a number between 0 and 1) and the bill total, and return the amount to 
 # tip.
-def caclulate_tip(tip_percentage, bill):
-amount_to_tip = bill * tip_percentage
+
+def calculate_tip(tip_percentage, bill):
+
+    amount_to_tip = bill * tip_percentage
+    return amount_to_tip
+
+
 
 # Define a function named apply_discount. It should accept a original 
 # price, and a discount percentage, and return the price after the 
 # discount is applied.
 
+def apply_discount(price, discount_percentage):
+    discount = price * discount_percentage
+    return price - discount
+
+#apply_discount(45, .5)
+#22.5
+
 # Define a function named handle_commas. It should accept a string that 
 # is a number that contains commas in it as input, and return a number as 
 # output.
 
+
+
 # Define a function named get_letter_grade. It should accept a number and 
 # return the letter grade associated with that number (A-F).
+
+
 
 # Define a function named remove_vowels that accepts a string and 
 # returns a string with all the vowels removed.
 
+
+
 # Define a function named normalize_name. It should accept a string and 
 # return a valid python identifier, that is:
+
+
 
 # anything that is not a valid python identifier should be removed
 # leading and trailing whitespace should be removed
 # everything should be lowercase
 # spaces should be replaced with underscores
+
+
 
 # for example:
 # Name will become name
@@ -66,6 +88,8 @@ amount_to_tip = bill * tip_percentage
 # Write a function named cumulative_sum that accepts a list of numbers and returns a list that is the cumulative sum of the numbers in the list.
 # cumulative_sum([1, 1, 1]) returns [1, 2, 3]
 # cumulative_sum([1, 2, 3, 4]) returns [1, 3, 6, 10]
+
+
 
 # Additional Exercise
 
