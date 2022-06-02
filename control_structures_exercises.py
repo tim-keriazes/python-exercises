@@ -233,18 +233,55 @@ for i in range (1,50):
 #(Hints: first make sure that the value the user entered is a valid number, also note that the input 
 #function returns a string, so you'll need to convert this to a numeric type.)
 
+num = input('Please input a positive integer: ')
+while True:
+    if (num.isdigit() ==  False
+        or int(num) < 0):
+            print('Invalid Input')
+            num = input('Please input a positive integer: ')
+    else:
+        break
+        #checks if the input is valid
+
+for i in range (0, int(num) +1):
+    print(i)
+        
 # Write a program that prompts the user for a positive integer. Next write a loop that prints out the 
 #numbers from the number the user entered down to 1.
 
-# Fizzbuzz
+num = input('Please input a positive integer: ')
+while True:
+    if (num.isdigit() ==  False
+        or int(num) < 0):
+            print('Invalid Input')
+            num = input('Please input a positive integer: ')
+    else:
+        break
+        #checks if the input is valid
 
+for i in reversed (range (1, int(num) +1)):  #reversed function of the range, same as before, instead of ending at 0, end at 1
+    print(i)
+
+
+# Fizzbuzz
 # One of the most common interview questions for entry-level programmers is the FizzBuzz test. 
 #Developed by Imran Ghory, the test is designed to test basic looping and conditional logic skills.
-
 # Write a program that prints the numbers from 1 to 100.
 # For multiples of three print "Fizz" instead of the number
 # For the multiples of five print "Buzz".
 # For numbers which are multiples of both three and five print "FizzBuzz".
+
+for i in range (1, 101):
+    if(i % 3 == 0) and (i % 5 == 0):  #divisible by both 3 and 5 then print
+        print('FizzBuzz')
+    elif i % 3 == 0:                  #elif divisible by 3 then print 
+        print('Fizz')
+    elif i % 5 == 0 :                 #elif divisible by 5 then print
+        print('Buzz')
+    else:
+        print(i)
+
+
 # Display a table of powers.
 
 # Prompt the user to enter an integer.
@@ -254,20 +291,30 @@ for i in range (1,50):
 # Only continue if the user agrees to.
 # Example Output
 
+num = input('Please Enter a Positive Integer: ')
 
-# What number would you like to go up to? 5
+print('Here is the table')
+print('number|squared|cubed')
+print('------|------|------')
 
-# Here is your table!
-
-# number | squared | cubed
-# ------ | ------- | -----
-# 1      | 1       | 1
-# 2      | 4       | 8
-# 3      | 9       | 27
-# 4      | 16      | 64
-# 5      | 25      | 125
-# Bonus: Research python's format string specifiers to align the table
-
+num = int(num)
+for i in range (1, num +1):
+    
+    #print(f'{i} |{i ** 2} |{i ** 3}')
+      print(f'{i:^6}|{i ** 2:^6}|{i ** 3:^6}')
+        
+# Please Enter a Positive Integer: 6
+#Here is the table
+#number|squared|cubed
+#------|------|------
+#  1   |  1   |  1   
+#  2   |  4   |  8   
+#  3   |  9   |  27  
+#  4   |  16  |  64  
+#  5   |  25  | 125  
+#  6   |  36  | 216        
+        
+        
 # Convert given number grades into letter grades.
 
 # Prompt the user for a numerical grade from 0 to 100.
@@ -276,14 +323,16 @@ for i in range (1,50):
 # Assume that the user will enter valid integers for the grades.
 # The application should only continue if the user agrees to.
 # Grade Ranges:
-
 # A : 100 - 88
 # B : 87 - 80
 # C : 79 - 67
 # D : 66 - 60
 # F : 59 - 0
-# Bonus
 
+
+
+
+# Bonus
 # Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
 # Create a list of dictionaries where each dictionary represents a book that you have read. Each dictionary in the list should have the keys title, author, and genre. Loop through the list and print out information about each book.
 
