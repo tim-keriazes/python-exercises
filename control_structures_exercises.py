@@ -329,11 +329,85 @@ for i in range (1, num +1):
 # D : 66 - 60
 # F : 59 - 0
 
-
-
-
+while True:
+    num = input('Please enter a numerical grade: ')
+    num = int(num)
+    if num in range(88, 101):
+        print('A')
+    elif num in range(80, 88):
+        print('B')
+    elif num in range(67, 80):
+        print('C')
+    elif num in range(60, 67):
+        print('D')
+    else:
+        print('F')
+    choice = input('Do you want to continue: ')
+    if choice.lower() in ['yes','y']:
+        continue
+    else:
+        break
+# Please enter a numerical grade: 100
+# A
+# Do you want to continue: y
+# Please enter a numerical grade: 88
+# A
+# Do you want to continue: y
+# Please enter a numerical grade: 80
+# B
+        
+        
 # Bonus
 # Edit your grade ranges to include pluses and minuses (ex: 99-100 = A+).
-# Create a list of dictionaries where each dictionary represents a book that you have read. Each dictionary in the list should have the keys title, author, and genre. Loop through the list and print out information about each book.
+
+# Create a list of dictionaries where each dictionary represents a book that you have read. 
+# Each dictionary in the list should have the keys title, author, and genre. Loop through the 
+# list and print out information about each book.
+
+books = [
+    {
+        'title':'title1',
+        'author': 'author1',
+        'genre': 'genre1'
+    },
+    {
+        'title':'title2',
+        'author': 'author1',
+        'genre': 'genre2'
+    },
+    {
+        'title':'title3',
+        'author': 'author2',
+        'genre': 'genre2'
+    },
+    {
+        'title':'title4',
+        'author': 'author3',
+        'genre': 'genre2'
+    }
+]
+
+#
+#
+[book for book in books]
+
+# [{'title': 'title1', 'author': 'author1', 'genre': 'genre1'},
+#  {'title': 'title2', 'author': 'author1', 'genre': 'genre2'},
+#  {'title': 'title3', 'author': 'author2', 'genre': 'genre2'},
+#  {'title': 'title4', 'author': 'author3', 'genre': 'genre2'}]
+
+# for book in books:
+#    print(f"The book {book['title']} by {book['author']} belongs to genre {book['genre']}")
+
 
 # Prompt the user to enter a genre, then loop through your books list and print out the titles of all the books in that genre.
+
+user_input = input('Please enter a genre: ')
+l = []
+for book in books:
+    if book['genre'] == user_input:
+        l.append(book['title']
+print(l)
+if len(l) == 0:
+    print('No matching title found')
+    print('Please choose from genre1, genre2')
