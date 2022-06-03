@@ -1,4 +1,4 @@
-import import_myfunc 
+import imported_func 
 
 
 # Exercises
@@ -8,7 +8,7 @@ import import_myfunc
 
 # Run an interactive python session and import the module. Call the is_vowel function using the . syntax.
 
-import_myfunc.is_vowel('a')
+imported_func.is_vowel('a')
 
 
 
